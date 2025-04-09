@@ -19,6 +19,6 @@ Hi there! I'm Devika Bongarde, a passionate Computer Science student with a knac
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=devikabongarde&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+[![](https://visitcount.itsvg.in/api?id=devikabongarde&label=Profile%20Views&pretty=false)](https://visitcount.itsvg.in)
+
