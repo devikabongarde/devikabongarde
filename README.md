@@ -1,5 +1,5 @@
 # 💫 About Me:
-👩‍💻 About Me<br>Hi there! I'm Devika Bongarde, a passionate Computer Science student with a knack for solving real-world problems through tech. I love building full-stack applications, exploring open-source, and learning new technologies.<br><br>🔭 Currently working on: React.js projects and Python-based tools<br><br>🌱 Learning: Firebase, Flask, and API integration<br><br>💡 Interests: Web dev, automation, UI/UX, and creative problem solving<br><br>🎯 Goal: To contribute to impactful projects and grow as a developer<br><br>💬 Let's connect and build something cool!<br><br>
+Hi there! I'm Devika Bongarde, a passionate Computer Science student with a knack for solving real-world problems through tech. I love building full-stack applications, exploring open-source, and learning new technologies.<br><br>🔭 Currently working on: React.js projects and Python-based tools<br><br>🌱 Learning: Firebase, Flask, and API integration<br><br>💡 Interests: Web dev, automation, UI/UX, and creative problem solving<br><br>🎯 Goal: To contribute to impactful projects and grow as a developer<br><br>💬 Let's connect and build something cool!<br><br>
 
 
 ## 🌐 Socials:
