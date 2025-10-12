@@ -17,10 +17,5 @@ Hi there! I'm Devika Bongarde, a passionate Computer Science student with a knac
 
 [![An image of @devikabongarde's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/devikabongarde)](https://holopin.io/@devikabongarde)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
----
-
 [![](https://visitcount.itsvg.in/api?id=devikabongarde&label=Profile%20Views&pretty=false)](https://visitcount.itsvg.in)
 
