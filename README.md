@@ -1,13 +1,10 @@
-# 👋 hey there! i'm devika :)  
+# hey there! i'm devika :)  
 
-just out here focusing on **building my skills**, breaking stuff (on purpose, i swear 😅), and learning cool tech things along the way 💻💡  
+just out here focusing on **building my skills**, breaking stuff (on purpose, i swear 😅), and learning cool tech things along the way. 
 
-
-
-## you can find me here too!
 <p align="left">
-<a href="https://twitter.com/devikabongarde" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="devikabongarde" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/devikabongarde" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="devikabongarde" height="30" width="40" /></a>
+<a href="https://twitter.com/bongardedevika" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="bongardedevika" height="30" width="40" /></a>
 </p>
 
 
