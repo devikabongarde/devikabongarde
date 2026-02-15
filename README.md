@@ -40,7 +40,7 @@ just out here focusing on **building my skills**, breaking stuff (on purpose, i 
 
 ---
 
-## here are my stats (because... why not?)
+## here are my stats 
 
 ![](https://github-readme-stats.vercel.app/api?username=devikabongarde&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
 ![](https://nirzak-streak-stats.vercel.app/?user=devikabongarde&theme=dark&hide_border=false)
