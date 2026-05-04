@@ -1,0 +1,324 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <foreignObject width="800" height="1100">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+          --bg: #fff8f5;
+          --char: #1a0a10;
+          --pink: #F7A8B8;
+          --pink-deep: #e07090;
+          --muted: #b07890;
+          --soft: #f9e9ef;
+          --grid: rgba(247,168,184,0.14);
+          --border: rgba(224,112,144,0.35);
+          --mono: 'Space Mono', 'Courier New', monospace;
+          --serif: 'DM Serif Display', 'Georgia', serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --bg: #130810;
+            --char: #f9e9ef;
+            --soft: #2a0e1c;
+            --grid: rgba(247,168,184,0.07);
+            --border: rgba(247,168,184,0.2);
+            --muted: #c08090;
+          }
+        }
+
+        body, .root {
+          width: 800px;
+          min-height: 1100px;
+          background-color: var(--bg);
+          background-image:
+            linear-gradient(var(--grid) 1px, transparent 1px),
+            linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+          background-size: 32px 32px;
+          font-family: var(--mono);
+          color: var(--char);
+        }
+
+        .root {
+          padding: 0 44px 52px;
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+        }
+
+        /* ── HERO ── */
+        .hero {
+          text-align: center;
+          padding: 48px 0 36px;
+          position: relative;
+        }
+        .hero-name {
+          font-family: var(--serif);
+          font-style: italic;
+          font-size: 54px;
+          color: var(--char);
+          letter-spacing: -0.02em;
+          line-height: 1.05;
+          animation: rise 0.7s ease both;
+        }
+        .hero-name span { color: var(--pink-deep); }
+        .hero-sub {
+          margin-top: 8px;
+          font-size: 10px;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          color: var(--muted);
+          animation: rise 0.7s 0.15s ease both;
+        }
+        .hero-pill {
+          display: inline-block;
+          margin-top: 16px;
+          background: var(--char);
+          color: var(--pink);
+          font-size: 11px;
+          padding: 6px 16px;
+          border-radius: 3px;
+          letter-spacing: 0.06em;
+          animation: rise 0.7s 0.3s ease both;
+        }
+        .hero-pill::after {
+          content: '▮';
+          margin-left: 4px;
+          animation: blink 1s step-end infinite;
+        }
+
+        /* corner brackets */
+        .corners { position: absolute; inset: 0; pointer-events: none; }
+        .c { position: absolute; width: 13px; height: 13px; border-color: var(--pink-deep); border-style: solid; }
+        .c.tl { top: 14px; left: 0;   border-width: 2px 0 0 2px; }
+        .c.tr { top: 14px; right: 0;  border-width: 2px 2px 0 0; }
+        .c.bl { bottom: 0; left: 0;   border-width: 0 0 2px 2px; }
+        .c.br { bottom: 0; right: 0;  border-width: 0 2px 2px 0; }
+
+        /* ── DIVIDER ── */
+        .div {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin: 28px 0;
+          color: var(--pink);
+          font-size: 10px;
+          letter-spacing: 0.3em;
+        }
+        .div::before, .div::after {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--pink-deep), transparent);
+          opacity: 0.5;
+        }
+
+        /* ── BIO ── */
+        .bio {
+          border: 1px solid var(--border);
+          border-radius: 2px;
+          padding: 18px 22px;
+          background: rgba(255,248,245,0.5);
+          font-size: 12.5px;
+          line-height: 1.85;
+          color: var(--char);
+          position: relative;
+          animation: rise 0.7s 0.2s ease both;
+        }
+        @media (prefers-color-scheme: dark) {
+          .bio { background: rgba(30,8,18,0.5); }
+        }
+        .bio-tag {
+          position: absolute;
+          top: -9px; left: 16px;
+          background: var(--bg);
+          padding: 0 8px;
+          font-size: 9px;
+          color: var(--muted);
+          letter-spacing: 0.15em;
+        }
+        .bio b { color: var(--pink-deep); font-weight: 700; }
+
+        /* ── SECTION LABEL ── */
+        .sec-label {
+          font-size: 9px;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          color: var(--muted);
+          margin-bottom: 14px;
+        }
+
+        /* ── CONNECT ── */
+        .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+        .chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          border: 1px solid var(--border);
+          padding: 6px 14px;
+          border-radius: 2px;
+          font-size: 11px;
+          color: var(--pink-deep);
+          text-decoration: none;
+          letter-spacing: 0.06em;
+          transition: background 0.18s;
+        }
+        .chip:hover { background: var(--pink); color: var(--char); }
+        .chip-lbl { font-family: var(--mono); font-size: 10px; font-weight: 700; }
+
+        /* ── SKILLS GRID ── */
+        .skill-wrap {
+          border: 1px solid var(--border);
+          border-radius: 2px;
+          padding: 18px 16px 14px;
+          text-align: center;
+          position: relative;
+        }
+        .skill-wrap .bio-tag { top: -9px; left: 16px; }
+        .skill-wrap img { display: block; margin: 0 auto 12px; max-width: 100%; }
+        .badges { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+        .badges img { height: 20px; opacity: 0.88; filter: saturate(0.85); border-radius: 2px; }
+
+        /* ── STICKERS ── */
+        .sticker-wrap img { max-width: 100%; border-radius: 2px; border: 1px solid var(--border); display: block; }
+
+        /* ── FOOTER ── */
+        .footer {
+          margin-top: 32px;
+          text-align: center;
+          padding-top: 24px;
+          border-top: 1px solid var(--border);
+          position: relative;
+        }
+        .footer-diamond {
+          position: absolute;
+          top: -8px; left: 50%;
+          transform: translateX(-50%);
+          background: var(--bg);
+          padding: 0 10px;
+          color: var(--pink);
+          font-size: 14px;
+          line-height: 1;
+        }
+        .footer-quote {
+          font-family: var(--serif);
+          font-style: italic;
+          font-size: 14px;
+          color: var(--muted);
+          line-height: 1.7;
+        }
+
+        /* ── WAVE ── */
+        .wave-wrap { margin-top: 28px; text-align: center; }
+        .wave-wrap img { max-width: 100%; display: block; margin: 0 auto; }
+
+        /* animations */
+        @keyframes rise { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+        .s1 { animation: rise 0.6s 0.05s ease both; }
+        .s2 { animation: rise 0.6s 0.15s ease both; }
+        .s3 { animation: rise 0.6s 0.25s ease both; }
+        .s4 { animation: rise 0.6s 0.35s ease both; }
+        .s5 { animation: rise 0.6s 0.45s ease both; }
+        .s6 { animation: rise 0.6s 0.55s ease both; }
+      </style>
+
+      <div class="root">
+
+        <!-- HERO -->
+        <div class="hero">
+          <div class="corners">
+            <div class="c tl"></div><div class="c tr"></div>
+            <div class="c bl"></div><div class="c br"></div>
+          </div>
+          <div class="hero-name">hey there! i'm <span>devika</span> :) ✨</div>
+          <div class="hero-sub">builder &middot; breaker &middot; learner</div>
+          <div class="hero-pill">building skills 💻</div>
+        </div>
+
+        <!-- TYPING SVG -->
+        <div style="text-align:center; margin-bottom:4px;" class="s1">
+          <img src="https://readme-typing-svg.herokuapp.com?font=Space+Mono&amp;pause=1000&amp;color=E07090&amp;center=true&amp;vCenter=true&amp;width=435&amp;lines=building+skills+%F0%9F%92%BB;breaking+things+on+purpose+%F0%9F%98%85;learning+cool+tech+everyday+%F0%9F%9A%80" alt="typing" height="28" />
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="div s2">✦ ✦ ✦</div>
+
+        <!-- BIO -->
+        <div class="bio s2">
+          <span class="bio-tag">// about.md</span>
+          just out here focusing on <b>building my skills</b>, breaking stuff (on purpose, i swear 😅), and learning cool tech things along the way.
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="div s3">✦ ✦ ✦</div>
+
+        <!-- CONNECT -->
+        <div class="s3">
+          <div class="sec-label">🌐 let's connect</div>
+          <div class="chips">
+            <a class="chip" href="https://linkedin.com/in/devikabongarde">
+              <img src="https://skillicons.dev/icons?i=linkedin" width="18" height="18" alt=""/>
+              <span class="chip-lbl">linkedin</span>
+            </a>
+            <a class="chip" href="https://twitter.com/bongardedevika">
+              <img src="https://skillicons.dev/icons?i=twitter" width="18" height="18" alt=""/>
+              <span class="chip-lbl">twitter</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="div s4">✦ ✦ ✦</div>
+
+        <!-- SKILLS -->
+        <div class="s4">
+          <div class="sec-label">🧠 i'm familiar with these :></div>
+          <div class="skill-wrap">
+            <span class="bio-tag">// stack.json</span>
+            <img src="https://skillicons.dev/icons?i=python,c,java,js,html,react,vite,tailwind,figma,firebase,flask,fastapi,laravel,mysql,postgres,git,github,postman,gcp,vercel&amp;perline=10" alt="tech stack" height="200" />
+            <div class="badges">
+              <img src="https://img.shields.io/badge/.NET-5C2D91?style=flat-square&amp;logo=.net&amp;logoColor=white" alt=".NET"/>
+              <img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&amp;logo=Canva&amp;logoColor=white" alt="Canva"/>
+              <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&amp;logo=prettier&amp;logoColor=black" alt="Prettier"/>
+              <img src="https://img.shields.io/badge/Apache-D42029?style=flat-square&amp;logo=apache&amp;logoColor=white" alt="Apache"/>
+              <img src="https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&amp;logo=apache-tomcat&amp;logoColor=black" alt="Tomcat"/>
+              <img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&amp;logo=adobe-photoshop&amp;logoColor=white" alt="Photoshop"/>
+              <img src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&amp;logo=adobe-illustrator&amp;logoColor=white" alt="Illustrator"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="div s5">✦ ✦ ✦</div>
+
+        <!-- STICKERS -->
+        <div class="s5">
+          <div class="sec-label">🎀 collecting digital stickers because it's fun :></div>
+          <div class="sticker-wrap">
+            <a href="https://holopin.io/@devikabongarde">
+              <img src="https://holopin.me/devikabongarde" alt="holopin sticker board" />
+            </a>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer s6">
+          <span class="footer-diamond">✦</span>
+          <div class="footer-quote">
+            "currently just a girl coding her way through<br/>caffeine, curiosity, and chaos ☕💻✨"
+          </div>
+        </div>
+
+        <!-- WAVE -->
+        <div class="wave-wrap s6">
+          <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=F7A8B8&amp;height=90&amp;section=footer" alt="" />
+        </div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
