@@ -1,3 +1,4 @@
+<img src="banner.png" width="100%">
 # hey there! i'm devika :)  
 
 just out here focusing on **building my skills**, breaking stuff (on purpose, i swear 😅), and learning cool tech things along the way. 
